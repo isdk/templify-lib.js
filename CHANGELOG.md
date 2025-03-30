@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.2](https://github.com/isdk/templify-lib.js/compare/v0.3.1...v0.3.2) (2025-03-30)
+
+
+### Bug Fixes
+
+* can not clean files ([8536a8d](https://github.com/isdk/templify-lib.js/commit/8536a8d22a86abe93a71a559c282ac2c3f8e537c))
+
 ## [0.3.1](https://github.com/isdk/templify-lib.js/compare/v0.3.0...v0.3.1) (2025-03-30)
 
 
