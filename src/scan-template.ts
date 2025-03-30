@@ -1,6 +1,6 @@
 import { readFile } from "fs/promises";
 import path from 'path';
-import { glob, traverseFolder } from "@isdk/util";
+import { glob, toCapitalCase, traverseFolder } from "@isdk/util";
 import { isBinaryFile } from "isbinaryfile";
 import { StringTemplate } from "@isdk/template-engines";
 
@@ -16,6 +16,7 @@ export async function scanTemplate(templateDir: string, options?: TemplateConfig
   const templifyConfigFilepath = path.join(templateDir, DefaultTemplifyConfigFileName);
   const tempifyConfig: any = loadConfigFile(templifyConfigFilepath, {externalFile: 'README.md'}) || {};
   const files: string[] = normalizeIncludeFiles(tempifyConfig.files || []);
+  const parameters = tempifyConfig.parameters || {};
   const searchFiles: string[] = options?.files as any || DefaultAllTextFiles;
   let found = 0;
 
@@ -28,6 +29,23 @@ export async function scanTemplate(templateDir: string, options?: TemplateConfig
       if (StringTemplate.isTemplate({template: content, templateFormat: tempifyConfig.templateFormat})) {
         const filename = path.relative(templateDir, filePath);
         console.log(`found template file: ${filename}`);
+        const template: any = new StringTemplate(content, {templateFormat: tempifyConfig.templateFormat});
+        if (template.getVariables) {
+          const variableNames: string[] = template.getVariables();
+          if (Array.isArray(variableNames)) {
+            variableNames.forEach((variableName) => {
+              if (!parameters[variableName]) {
+                parameters[variableName] = {
+                  name: variableName,
+                  type: 'string',
+                  title: toCapitalCase(variableName),
+                  description: `Enter ${variableName} here`,
+                  default: ''
+                };
+              }
+            });
+          }
+        }
         if (!files.includes(filename)) {
           files.push(filename);
           found++;
