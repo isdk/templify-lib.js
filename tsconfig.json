@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "outDir": "dist",
-    "rootDir": "src",
+    "target": "es2021",
+    "lib": ["ES2022", "DOM"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "strict": true,
-    "target": "es2022",
+    // "strictNullChecks": false,
     "typeRoots": [
       "./types",
       "./node_modules/@types",
       "./node_modules/@microsoft"
     ],
+
     "strictPropertyInitialization": false,
     "useDefineForClassFields": false,
     "allowJs": true,
@@ -23,8 +23,9 @@
     "resolveJsonModule": true,
   },
   "include": ["src/**/*"],
-  "ts-node": {
-    "transpileOnly": true,
-    "esm": true
-  }
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
 }
