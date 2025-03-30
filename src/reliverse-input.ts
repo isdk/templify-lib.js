@@ -14,7 +14,7 @@ import type { PromptOptions } from "@reliverse/prompts";
 
 import { InputEnumOptionItem } from "./input-type.js";
 import { loadConfigFile, saveConfigFile } from "./template-config.js";
-import pkg from "../../package.json" with { type: "json" };
+import pkg from "../package.json" with { type: "json" };
 
 type PreventWrongTerminalSizeOptions = {
   isDev?: boolean;
@@ -67,6 +67,8 @@ export interface ProcessSchemaOptions {
   defaultDataFileName?: string;
   data?: any;
   dryRun?: boolean;
+  packageName?: string;
+  packageVersion?: string;
 }
 
 export const basicStartPromptConfig = {
@@ -175,7 +177,7 @@ async function getDataFromInput(schema: InputSchema, options?: Partial<ProcessSc
       type: 'M_ERROR',
       title: `Error processing ${schema.name}`,
       content: String(error)
-    });
+    } as any);
     return schema.default;
   }
 }
@@ -233,7 +235,7 @@ async function handleStringPrompt(schema: InputSchema, options?: Partial<Process
     title: schema.title || schema.name,
     defaultValue: schema.default,
     hint: schema.description
-  });
+  } as any);
 }
 
 async function handleNumberPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
