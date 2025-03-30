@@ -27,9 +27,13 @@ export async function applyTemplate(templateDir: string, options: TemplateConfig
       if (!options.dryRun) {
         try {
           await rm(filePath, {recursive: true, force: true})
+          if (entry.isDirectory()) {
+            return true
+          }
         } catch (error) {
           console.error(`Error deleting directory: ${filePath}`)
           console.error(error)
+          return true
         }
       }
     } else if (entry.isDirectory()) {
