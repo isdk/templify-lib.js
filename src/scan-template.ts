@@ -1,8 +1,6 @@
-import { existsSync, readFileSync } from "fs";
 import { readFile } from "fs/promises";
 import path from 'path';
 import { glob, toCapitalCase, traverseFolder } from "@isdk/util";
-import { isBinaryFile } from "isbinaryfile";
 import { StringTemplate } from "@isdk/template-engines";
 
 import { DefaultAllTextFiles, DefaultTemplifyConfigFileName, TemplateConfig, loadConfigFile, normalizeIncludeFiles, saveConfigFile } from "./template-config.js";
