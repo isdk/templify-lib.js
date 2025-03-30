@@ -8,7 +8,7 @@
 
 > **scanTemplate**(`templateDir`, `options`?): `Promise`\<`number`\>
 
-Defined in: [templify-lib/src/scan-template.ts:9](https://github.com/isdk/templify-lib.js/blob/8536a8d22a86abe93a71a559c282ac2c3f8e537c/src/scan-template.ts#L9)
+Defined in: [templify-lib/src/scan-template.ts:9](https://github.com/isdk/templify-lib.js/blob/c0f6004b17899f176242398987b532abb576e16b/src/scan-template.ts#L9)
 
 ## Parameters
 
