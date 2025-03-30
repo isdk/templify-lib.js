@@ -24,7 +24,14 @@ export async function applyTemplate(templateDir: string, options: TemplateConfig
     if (hasCleanFiles && glob(filePath, cleanFiles, templateDir)) {
       filePath = path.join(templateDir, filePath)
       console.log(`delete: ${filePath}`)
-      if (!options.dryRun) {await rm(filePath, {recursive: true, force: true})}
+      if (!options.dryRun) {
+        try {
+          await rm(filePath, {recursive: true, force: true})
+        } catch (error) {
+          console.error(`Error deleting directory: ${filePath}`)
+          console.error(error)
+        }
+      }
     } else if (entry.isDirectory()) {
       const stopped = glob(filePath, ignoreFiles, templateDir)
       if (stopped) { return stopped }
