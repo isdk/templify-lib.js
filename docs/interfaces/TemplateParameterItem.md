@@ -6,7 +6,7 @@
 
 # Interface: TemplateParameterItem
 
-Defined in: [templify-lib/src/template-config.ts:8](https://github.com/isdk/templify-lib.js/blob/3ca95101e07571731e768c30a7a5d33db8d3686c/src/template-config.ts#L8)
+Defined in: [templify-lib/src/template-config.ts:8](https://github.com/isdk/templify-lib.js/blob/8536a8d22a86abe93a71a559c282ac2c3f8e537c/src/template-config.ts#L8)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [templify-lib/src/template-config.ts:8](https://github.com/isdk/temp
 
 > `optional` **choices**: `string`[]
 
-Defined in: [templify-lib/src/template-config.ts:13](https://github.com/isdk/templify-lib.js/blob/3ca95101e07571731e768c30a7a5d33db8d3686c/src/template-config.ts#L13)
+Defined in: [templify-lib/src/template-config.ts:13](https://github.com/isdk/templify-lib.js/blob/8536a8d22a86abe93a71a559c282ac2c3f8e537c/src/template-config.ts#L13)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [templify-lib/src/template-config.ts:13](https://github.com/isdk/tem
 
 > `optional` **default**: `any`
 
-Defined in: [templify-lib/src/template-config.ts:12](https://github.com/isdk/templify-lib.js/blob/3ca95101e07571731e768c30a7a5d33db8d3686c/src/template-config.ts#L12)
+Defined in: [templify-lib/src/template-config.ts:12](https://github.com/isdk/templify-lib.js/blob/8536a8d22a86abe93a71a559c282ac2c3f8e537c/src/template-config.ts#L12)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [templify-lib/src/template-config.ts:12](https://github.com/isdk/tem
 
 > `optional` **description**: `string`
 
-Defined in: [templify-lib/src/template-config.ts:10](https://github.com/isdk/templify-lib.js/blob/3ca95101e07571731e768c30a7a5d33db8d3686c/src/template-config.ts#L10)
+Defined in: [templify-lib/src/template-config.ts:10](https://github.com/isdk/templify-lib.js/blob/8536a8d22a86abe93a71a559c282ac2c3f8e537c/src/template-config.ts#L10)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [templify-lib/src/template-config.ts:10](https://github.com/isdk/tem
 
 > `optional` **name**: `string`
 
-Defined in: [templify-lib/src/template-config.ts:9](https://github.com/isdk/templify-lib.js/blob/3ca95101e07571731e768c30a7a5d33db8d3686c/src/template-config.ts#L9)
+Defined in: [templify-lib/src/template-config.ts:9](https://github.com/isdk/templify-lib.js/blob/8536a8d22a86abe93a71a559c282ac2c3f8e537c/src/template-config.ts#L9)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [templify-lib/src/template-config.ts:9](https://github.com/isdk/temp
 
 > `optional` **type**: `string`
 
-Defined in: [templify-lib/src/template-config.ts:11](https://github.com/isdk/templify-lib.js/blob/3ca95101e07571731e768c30a7a5d33db8d3686c/src/template-config.ts#L11)
+Defined in: [templify-lib/src/template-config.ts:11](https://github.com/isdk/templify-lib.js/blob/8536a8d22a86abe93a71a559c282ac2c3f8e537c/src/template-config.ts#L11)
