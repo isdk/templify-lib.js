@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.0](https://github.com/isdk/templify-lib.js/compare/v0.2.1...v0.3.0) (2025-03-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* extract lib from templify
+
+### Features
+
+* scan should generate parameters automatically ([840a743](https://github.com/isdk/templify-lib.js/commit/840a7438c7889f042469376a5b72481d11dba01e))
+
+
+### Bug Fixes
+
+* **build:** entry index only ([2007636](https://github.com/isdk/templify-lib.js/commit/20076368a2ea63f564fe8b3ad9198a87e993363a))
+* package.json path ([1dd41f6](https://github.com/isdk/templify-lib.js/commit/1dd41f623bfe3ede94ce6a1aa2bb29a312d91661))
+* **ts:** export InputSchema, ProcessSchemaOptions ([4b11bdf](https://github.com/isdk/templify-lib.js/commit/4b11bdfbcc3468955d4e96a54c0792fd53f151f7))
+
+
+### Refactor
+
+* change dir struct ([6db5d03](https://github.com/isdk/templify-lib.js/commit/6db5d03e410a39aba1c1a0db0cde7d148e3a446f))
+* extract lib from templify ([54e5a04](https://github.com/isdk/templify-lib.js/commit/54e5a04f3b2b648087069ac21b5e26809bf3d15e))
+* rename index.js to index.ts ([4e6efc3](https://github.com/isdk/templify-lib.js/commit/4e6efc37d423f4a983be918e8703b4077664c03d))
+* use the @isdk/util now ([5384a75](https://github.com/isdk/templify-lib.js/commit/5384a754c2bed221294b4fc7b62fbc092ad6978b))
+
 ## [0.2.1](https://github.com/isdk/templify.js/compare/v0.2.0...v0.2.1) (2025-03-29)
 
 ## 0.2.0 (2025-03-29)
