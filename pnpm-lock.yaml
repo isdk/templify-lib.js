@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@inquirer/prompts':
-        specifier: ^7.4.0
-        version: 7.4.0(@types/node@18.19.84)
       '@isdk/artistic-text':
         specifier: ^0.1.1
         version: 0.1.1
@@ -20,6 +17,9 @@ importers:
       '@isdk/template-engines':
         specifier: ^0.6.1
         version: 0.6.2
+      '@isdk/util':
+        specifier: ^0.1.1
+        version: link:../util
       '@reliverse/prompts':
         specifier: ^1.6.0
         version: 1.6.0
@@ -45,6 +45,9 @@ importers:
       '@eslint/js':
         specifier: ^9.23.0
         version: 9.23.0
+      '@inquirer/prompts':
+        specifier: ^7.4.0
+        version: 7.4.0(@types/node@18.19.84)
       '@types/chai':
         specifier: ^5
         version: 5.2.1
@@ -60,9 +63,6 @@ importers:
       eslint-config-prettier:
         specifier: ^10
         version: 10.1.1(eslint@9.23.0)
-      inquirer:
-        specifier: ^12.5.0
-        version: 12.5.0(@types/node@18.19.84)
       mocha:
         specifier: ^11
         version: 11.1.0
@@ -1306,15 +1306,6 @@ packages:
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  inquirer@12.5.0:
-    resolution: {integrity: sha512-aiBBq5aKF1k87MTxXDylLfwpRwToShiHrSv4EmB07EYyLgmnjEz5B3rn0aGw1X3JA/64Ngf2T54oGwc+BCsPIQ==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      '@types/node': '>=18'
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-
   interpret@1.4.0:
     resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
     engines: {node: '>= 0.10'}
@@ -1778,15 +1769,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  run-async@3.0.0:
-    resolution: {integrity: sha512-540WwVDOMxA6dN6We19EcT9sc3hkXPw5mzRNGM3FkdN/vtE9NFvj5lFAPNwUDmJjXidm3v7TC1cTE7t17Ulm1Q==}
-    engines: {node: '>=0.12.0'}
-
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
-
-  rxjs@7.8.2:
-    resolution: {integrity: sha512-dhKf903U/PQZY6boNNtAGdWbG85WAbjT/1xYoZIC7FAY0yWapOBQVsVrDl58W86//e1VpMNBtRV4MaXfdMySFA==}
 
   safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
@@ -2001,9 +1985,6 @@ packages:
   ts-regex-builder@1.8.2:
     resolution: {integrity: sha512-Y8HovHFheDKm/jgLIWSO8o81xA/I9O5AGc3/vNG1sVSskatOifr3SQzAsatBXGLjL3nYhQif1MpwQRS5GF8ADg==}
     engines: {node: '>= 18.0.0'}
-
-  tslib@2.8.1:
-    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   tsup@8.4.0:
     resolution: {integrity: sha512-b+eZbPCjz10fRryaAA7C8xlIHnf8VnsaRqydheLIqwG/Mcpfk8Z5zp3HayX7GaTygkigHl5cBUs+IhcySiIexQ==}
@@ -3417,18 +3398,6 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inquirer@12.5.0(@types/node@18.19.84):
-    dependencies:
-      '@inquirer/core': 10.1.9(@types/node@18.19.84)
-      '@inquirer/prompts': 7.4.0(@types/node@18.19.84)
-      '@inquirer/type': 3.0.5(@types/node@18.19.84)
-      ansi-escapes: 4.3.2
-      mute-stream: 2.0.0
-      run-async: 3.0.0
-      rxjs: 7.8.2
-    optionalDependencies:
-      '@types/node': 18.19.84
-
   interpret@1.4.0: {}
 
   is-binary-path@2.1.0:
@@ -3884,15 +3853,9 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.38.0
       fsevents: 2.3.3
 
-  run-async@3.0.0: {}
-
   run-parallel@1.2.0:
     dependencies:
       queue-microtask: 1.2.3
-
-  rxjs@7.8.2:
-    dependencies:
-      tslib: 2.8.1
 
   safe-buffer@5.2.1: {}
 
@@ -4079,8 +4042,6 @@ snapshots:
   ts-interface-checker@0.1.13: {}
 
   ts-regex-builder@1.8.2: {}
-
-  tslib@2.8.1: {}
 
   tsup@8.4.0(postcss@8.5.3)(tsx@4.19.3)(typescript@5.8.2)(yaml@2.7.1):
     dependencies:

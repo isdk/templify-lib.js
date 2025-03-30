@@ -12,8 +12,7 @@ import {
 } from "@reliverse/prompts";
 import type { PromptOptions } from "@reliverse/prompts";
 
-import { InputEnumOptionItem } from "./input-type.js";
-import { loadConfigFile, saveConfigFile } from "./template-config.js";
+import { loadConfigFile, saveConfigFile } from "./template-config";
 import pkg from "../package.json" with { type: "json" };
 
 type PreventWrongTerminalSizeOptions = {
@@ -39,7 +38,12 @@ type StartPromptOptions = PromptOptions & {
   };
 };
 
-export {InputEnumOptionItem}
+export interface InputEnumOptionItem {
+  value: string | number
+  title?: string
+  description?: string
+}
+
 export type InputEnumType = Array<string | number | InputEnumOptionItem>;
 
 export interface InputSchema {

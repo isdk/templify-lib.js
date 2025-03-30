@@ -1,10 +1,10 @@
 import { readFile } from "fs/promises";
 import path from 'path';
-import { DefaultAllTextFiles, DefaultTemplifyConfigFileName, TemplateConfig, loadConfigFile, toTemplateFiles, saveConfigFile } from "./template-config.js";
-import { traverseFolder } from "./traverse-folder.js";
-import { glob } from "./glob.js";
+import { glob, traverseFolder } from "@isdk/util";
 import { isBinaryFile } from "isbinaryfile";
 import { StringTemplate } from "@isdk/template-engines";
+
+import { DefaultAllTextFiles, DefaultTemplifyConfigFileName, TemplateConfig, loadConfigFile, normalizeIncludeFiles, saveConfigFile } from "./template-config.js";
 
 export async function scanTemplate(templateDir: string, options?: TemplateConfig) {
   // let templateConfig: TemplateConfig = {
@@ -15,7 +15,7 @@ export async function scanTemplate(templateDir: string, options?: TemplateConfig
   // };
   const templifyConfigFilepath = path.join(templateDir, DefaultTemplifyConfigFileName);
   const tempifyConfig: any = loadConfigFile(templifyConfigFilepath, {externalFile: 'README.md'}) || {};
-  const files: string[] = toTemplateFiles(tempifyConfig.files || []);
+  const files: string[] = normalizeIncludeFiles(tempifyConfig.files || []);
   const searchFiles: string[] = options?.files as any || DefaultAllTextFiles;
   let found = 0;
 
@@ -44,4 +44,6 @@ export async function scanTemplate(templateDir: string, options?: TemplateConfig
       console.log(`Saved ${templifyConfigFilepath}`);
     }
   }
+
+  return found
 }

@@ -1,13 +1,12 @@
 import { type Dirent } from "fs";
 import { readFile, rm, writeFile } from "fs/promises";
 import { StringTemplate } from "@isdk/template-engines";
+import { glob, traverseFolder } from "@isdk/util";
 
-import { glob } from './glob.js';
-import { TemplateConfig, toTemplateFiles } from "./template-config.js";
-import { traverseFolder } from "./traverse-folder.js";
+import { TemplateConfig, normalizeIncludeFiles } from "./template-config.js";
 
 export async function applyTemplate(templateDir: string, options: TemplateConfig) {
-  const files = toTemplateFiles(options.files || [])
+  const files = normalizeIncludeFiles(options.files || [])
   const data = options.parameters
   if (!data || Object.keys(data).length === 0) {
     console.log('no parameters to apply')
