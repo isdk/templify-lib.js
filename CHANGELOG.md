@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.4](https://github.com/isdk/templify-lib.js/compare/v0.3.3...v0.3.4) (2025-03-30)
+
+
+### Bug Fixes
+
+* should not stop when deleting raise error on win ([2074257](https://github.com/isdk/templify-lib.js/commit/2074257ae84556236345f69e1a42173a287cae3a))
+
 ## [0.3.3](https://github.com/isdk/templify-lib.js/compare/v0.3.2...v0.3.3) (2025-03-30)
 
 
