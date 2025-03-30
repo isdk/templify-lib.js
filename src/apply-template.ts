@@ -4,6 +4,7 @@ import { StringTemplate } from "@isdk/template-engines";
 import { glob, traverseFolder } from "@isdk/util";
 
 import { TemplateConfig, normalizeIncludeFiles } from "./template-config.js";
+import { getIgnoreFiles } from "./get-ignore-files.js";
 
 export async function applyTemplate(templateDir: string, options: TemplateConfig) {
   const files = normalizeIncludeFiles(options.files || [])
@@ -15,12 +16,16 @@ export async function applyTemplate(templateDir: string, options: TemplateConfig
 
   const cleanFiles = options.clean
   const hasCleanFiles = Array.isArray(cleanFiles) && cleanFiles.length > 0
+  const ignoreFiles: string[] = getIgnoreFiles(templateDir, options);
 
   const templateFormat = options.templateFormat || 'hf'
   await traverseFolder(templateDir, async (filePath, entry: Dirent) => {
     if (hasCleanFiles && glob(filePath, cleanFiles, templateDir)) {
       console.log(`delete: ${filePath}`)
       if (!options.dryRun) {await rm(filePath, {recursive: true, force: true})}
+    } else if (entry.isDirectory()) {
+      const stopped = glob(filePath, ignoreFiles, templateDir)
+      if (stopped) { return stopped }
     } else if (entry.isFile() && glob(filePath, files, templateDir)) {
       const template = await readFile(filePath, 'utf8')
       const content = await StringTemplate.formatIf({template, data, templateFormat})

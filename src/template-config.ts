@@ -19,6 +19,7 @@ export interface TemplateConfig {
   clean?: string[]
   templateFormat?: string
   dryRun?: boolean
+  ignoreFiles?: string[]
 }
 
 export function saveConfigFile(filename: string, config: any, options?: LoadConfigFileOptions) {
