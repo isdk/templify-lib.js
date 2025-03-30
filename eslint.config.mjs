@@ -11,6 +11,7 @@ export default tseslint.config(
   {
     // extends: compat.extends('prettier'),
     // files: ['**/*.ts', '**/*.tsx'],
+    extends: ['@antfu', 'prettier'],
     rules: {
       'tsdoc/syntax': 'off',
       'no-cond-assign': 'off',

@@ -2,11 +2,11 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entry: ['src/**/*.ts'],
-  format: 'esm',
+  format: ['cjs', 'esm'],
   shims: true,
   // splitting: true,
   // sourcemap: true,
-  clean: true,
+  // clean: true,
   minify: 'terser',
   terserOptions: {
     // compress: {
