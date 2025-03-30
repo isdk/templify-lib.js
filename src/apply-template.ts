@@ -1,3 +1,4 @@
+import path from 'path';
 import { type Dirent } from "fs";
 import { readFile, rm, writeFile } from "fs/promises";
 import { StringTemplate } from "@isdk/template-engines";
@@ -21,6 +22,7 @@ export async function applyTemplate(templateDir: string, options: TemplateConfig
   const templateFormat = options.templateFormat || 'hf'
   await traverseFolder(templateDir, async (filePath, entry: Dirent) => {
     if (hasCleanFiles && glob(filePath, cleanFiles, templateDir)) {
+      filePath = path.join(templateDir, filePath)
       console.log(`delete: ${filePath}`)
       if (!options.dryRun) {await rm(filePath, {recursive: true, force: true})}
     } else if (entry.isDirectory()) {
