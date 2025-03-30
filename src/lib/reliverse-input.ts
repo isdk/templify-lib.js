@@ -39,12 +39,13 @@ type StartPromptOptions = PromptOptions & {
   };
 };
 
-type ListType = Array<string | number | InputEnumOptionItem>;
+export {InputEnumOptionItem}
+export type InputEnumType = Array<string | number | InputEnumOptionItem>;
 
-interface InputSchema {
+export interface InputSchema {
   name: string;
   type: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
-  enum?: ListType;
+  enum?: InputEnumType;
   minPick?: number;
   maxPick?: number;
   uniqueItems?: boolean;
@@ -56,7 +57,7 @@ interface InputSchema {
   default?: any;
 };
 
-interface ProcessSchemaOptions {
+export interface ProcessSchemaOptions {
   displayInstructions?: boolean;
   title?: string;
   description?: string;
