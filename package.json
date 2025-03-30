@@ -5,7 +5,6 @@
   "author": "Riceball LEE @snowyu",
   "bugs": "https://github.com/isdk/templify-lib.js/issues",
   "dependencies": {
-    "@inquirer/prompts": "^7.4.0",
     "@isdk/artistic-text": "^0.1.1",
     "@isdk/glob": "^0.1.0",
     "@isdk/template-engines": "^0.6.1",
@@ -19,12 +18,12 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.23.0",
+    "@inquirer/prompts": "^7.4.0",
     "@types/chai": "^5",
     "@types/jest": "^29.5.14",
     "@types/node": "^18",
     "eslint": "^9",
     "eslint-config-prettier": "^10",
-    "inquirer": "^12.5.0",
     "mocha": "^11",
     "shx": "^0.3.3",
     "terser": "^5.39.0",
