@@ -8,4 +8,4 @@
 
 > `const` **DefaultDataFileName**: `"templify-data"` = `'templify-data'`
 
-Defined in: [templify-lib/src/template-config.ts:7](https://github.com/isdk/templify-lib.js/blob/2f28ed63fa1fab14ced4b1f55151d2b7839f83ed/src/template-config.ts#L7)
+Defined in: [templify-lib/src/template-config.ts:7](https://github.com/isdk/templify-lib.js/blob/00a1ac2997e500d54f38cfc631d4a46eca84ffa9/src/template-config.ts#L7)

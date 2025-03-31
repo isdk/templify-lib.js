@@ -8,7 +8,7 @@
 
 > `const` **extendedStartPromptConfig**: `object`
 
-Defined in: [templify-lib/src/reliverse-input.ts:63](https://github.com/isdk/templify-lib.js/blob/2f28ed63fa1fab14ced4b1f55151d2b7839f83ed/src/reliverse-input.ts#L63)
+Defined in: [templify-lib/src/reliverse-input.ts:63](https://github.com/isdk/templify-lib.js/blob/00a1ac2997e500d54f38cfc631d4a46eca84ffa9/src/reliverse-input.ts#L63)
 
 ## Type declaration
 
