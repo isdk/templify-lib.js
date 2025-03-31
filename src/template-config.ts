@@ -1,21 +1,14 @@
 import { ConfigFile, type LoadConfigFileOptions, type IncludeFiles } from '@isdk/util'
+import { InputSchema } from './input-schema'
 
 export {DefaultAllTextFiles, normalizeIncludeFiles} from '@isdk/util'
 
 export const DefaultTemplifyConfigFileName = '.templify.yaml'
 export const DefaultDataFileName = 'templify-data'
 
-export interface TemplateParameterItem {
-  name?: string
-  description?: string
-  type?: string
-  default?: any
-  choices?: string[]
-}
-
 export interface TemplateConfig {
   files?: string[]|IncludeFiles
-  parameters?: Record<string, TemplateParameterItem>
+  parameters?: Record<string, InputSchema>
   clean?: string[]
   templateFormat?: string
   dryRun?: boolean

@@ -1,3 +1,4 @@
+export * from './input-schema'
 export * from './template-config'
 export * from './reliverse-input'
 export * from './apply-template'
