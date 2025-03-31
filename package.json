@@ -5,16 +5,9 @@
   "author": "Riceball LEE @snowyu",
   "bugs": "https://github.com/isdk/templify-lib.js/issues",
   "dependencies": {
-    "@isdk/artistic-text": "^0.1.1",
-    "@isdk/glob": "^0.1.0",
     "@isdk/template-engines": "^0.6.1",
     "@isdk/util": "^0.2.0",
-    "@reliverse/prompts": "^1.6.0",
-    "custom-ability": "^2.0.1",
-    "isbinaryfile": "^5.0.4",
-    "load-config-file": "2.0.0",
-    "mime-type": "^5.0.2",
-    "yaml": "^2.7.0"
+    "@reliverse/prompts": "^1.6.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
