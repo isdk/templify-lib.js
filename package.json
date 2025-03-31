@@ -6,7 +6,7 @@
   "bugs": "https://github.com/isdk/templify-lib.js/issues",
   "dependencies": {
     "@isdk/template-engines": "^0.6.1",
-    "@isdk/util": "^0.2.0",
+    "@isdk/util": "^0.3.0",
     "@reliverse/prompts": "^1.6.0"
   },
   "devDependencies": {
