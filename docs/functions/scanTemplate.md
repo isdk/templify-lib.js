@@ -8,7 +8,7 @@
 
 > **scanTemplate**(`templateDir`, `options`?): `Promise`\<`number`\>
 
-Defined in: [templify-lib/src/scan-template.ts:35](https://github.com/isdk/templify-lib.js/blob/00a1ac2997e500d54f38cfc631d4a46eca84ffa9/src/scan-template.ts#L35)
+Defined in: [src/scan-template.ts:35](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/scan-template.ts#L35)
 
 Scans the specified template directory to identify template files and extract variable information.
 It updates the configuration file with the discovered template files and their parameters.

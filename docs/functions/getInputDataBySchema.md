@@ -8,7 +8,7 @@
 
 > **getInputDataBySchema**(`schema`, `options`): `Promise`\<`any`\>
 
-Defined in: [templify-lib/src/reliverse-input.ts:69](https://github.com/isdk/templify-lib.js/blob/00a1ac2997e500d54f38cfc631d4a46eca84ffa9/src/reliverse-input.ts#L69)
+Defined in: [src/reliverse-input.ts:69](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L69)
 
 ## Parameters
 
