@@ -69,8 +69,9 @@ export const extendedStartPromptConfig = {
 export async function getInputDataBySchema(schema: InputSchema, options: ProcessSchemaOptions) {
   let data: any
   const nonInteractive = options.nonInteractive;
+  let dataPath: string|undefined;
   if (nonInteractive) {
-    let dataPath = options.dataPath;
+    dataPath = options.dataPath;
     if (!dataPath) {
       dataPath = options.defaultDataFileName ?? 'templify-data';
     }
@@ -80,8 +81,7 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
     if (existsSync(dataPath)) {
       data = loadConfigFile(dataPath);
     } else {
-      const _data = generateDefaultDataFromSchema(schema);
-      if (!options.dryRun) {saveConfigFile(dataPath, _data);}
+      data = generateDefaultDataFromSchema(schema);
     }
 
   } else {
@@ -92,12 +92,14 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
     data = {...data, ...options.data};
   }
 
+  if (dataPath && !options.dryRun) {saveConfigFile(dataPath, data);}
+
   return data
 }
 
 
 // walk through the schema and generate default data for non-interactive mode
-function generateDefaultDataFromSchema(schema: InputSchema, result: any = {}) {
+export function generateDefaultDataFromSchema(schema: InputSchema, result: any = {}) {
   switch (schema.type) {
     case 'string': {
       result[schema.name] = schema.default || '';
@@ -127,7 +129,7 @@ function generateDefaultDataFromSchema(schema: InputSchema, result: any = {}) {
   return result;
 }
 
-async function getDataFromInput(schema: InputSchema, options?: Partial<ProcessSchemaOptions>): Promise<any> {
+export async function getDataFromInput(schema: InputSchema, options?: Partial<ProcessSchemaOptions>): Promise<any> {
   if (schema.enum) {
     return await handleEnumPrompt(schema, options)
   }
@@ -164,7 +166,7 @@ async function getDataFromInput(schema: InputSchema, options?: Partial<ProcessSc
   }
 }
 
-async function handleObject(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
+export async function handleObject(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
   const obj: Record<string, any> = {};
   const config = {
     ...extendedStartPromptConfig,
@@ -182,7 +184,7 @@ async function handleObject(schema: InputSchema, options?: Partial<ProcessSchema
   return obj;
 };
 
-async function handleArrayPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
+export async function handleArrayPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
   const result: any[] = [];
   const maxPick = schema.maxPick || Infinity;
   let i = 0;
@@ -211,7 +213,7 @@ async function handleArrayPrompt(schema: InputSchema, options?: Partial<ProcessS
   }
 }
 
-async function handleStringPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
+export async function handleStringPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
   return await inputPrompt({
     ...options,
     title: schema.title || schema.name,
@@ -220,7 +222,7 @@ async function handleStringPrompt(schema: InputSchema, options?: Partial<Process
   } as any);
 }
 
-async function handleNumberPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
+export async function handleNumberPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
   return await numberPrompt({
     ...options,
     title: schema.title || schema.name,
@@ -239,7 +241,7 @@ async function handleNumberPrompt(schema: InputSchema, options?: Partial<Process
   });
 }
 
-async function handleBooleanPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
+export async function handleBooleanPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
   return await confirmPrompt({
     ...options,
     title: schema.title || schema.name,
@@ -247,7 +249,7 @@ async function handleBooleanPrompt(schema: InputSchema, options?: Partial<Proces
   });
 }
 
-async function handleEnumPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
+export async function handleEnumPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
   const isSingleSelect = (schema.minPick == null && schema.maxPick == null) || (schema.minPick === 1 && schema.maxPick === 1);
   const config: any = {
     ...options,
