@@ -6,6 +6,32 @@ import { StringTemplate } from "@isdk/template-engines";
 import { DefaultAllTextFiles, DefaultTemplifyConfigFileName, TemplateConfig, loadConfigFile, normalizeIncludeFiles, saveConfigFile } from "./template-config.js";
 import { getIgnoreFiles } from "./get-ignore-files.js";
 
+/**
+ * Scans the specified template directory to identify template files and extract variable information.
+ * It updates the configuration file with the discovered template files and their parameters.
+ *
+ * @param templateDir - The directory path where the template files are located.
+ * @param options - Optional configuration for the scan, including file filters and dry-run mode.
+ * @returns A promise that resolves to the number of template files found during the scan.
+ *
+ * @example
+ * ```typescript
+ * import { scanTemplate } from '@isdk/templify-lib';
+ *
+ * async function example() {
+ *   const templateDir = '/path/to/template/directory';
+ *   const options = {
+ *     files: ['*.txt', '*.json'], // Specify file patterns to include
+ *     dryRun: true // Enable dry-run mode to prevent saving the configuration
+ *   };
+ *
+ *   const found = await scanTemplate(templateDir, options);
+ *   console.log(`Found ${found} template files.`);
+ * }
+ *
+ * example();
+ * ```
+ */
 export async function scanTemplate(templateDir: string, options?: TemplateConfig) {
   // let templateConfig: TemplateConfig = {
   //   files: DefaultAllTextFiles,
