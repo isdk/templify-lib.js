@@ -16,9 +16,9 @@ export interface TemplateConfig {
 }
 
 export function saveConfigFile(filename: string, config: any, options?: LoadConfigFileOptions) {
-  return ConfigFile.save(filename, config, options)
+  return ConfigFile.saveSync(filename, config, options)
 }
 
 export function loadConfigFile(filename: string, options?: LoadConfigFileOptions) {
-  return ConfigFile.load(filename, options)
+  return ConfigFile.loadSync(filename, options)
 }

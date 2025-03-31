@@ -8,7 +8,7 @@
     "@isdk/artistic-text": "^0.1.1",
     "@isdk/glob": "^0.1.0",
     "@isdk/template-engines": "^0.6.1",
-    "@isdk/util": "^0.1.5",
+    "@isdk/util": "^0.2.0",
     "@reliverse/prompts": "^1.6.0",
     "custom-ability": "^2.0.1",
     "isbinaryfile": "^5.0.4",
