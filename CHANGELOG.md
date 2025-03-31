@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.4.0](https://github.com/isdk/templify-lib.js/compare/v0.3.6...v0.4.0) (2025-03-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* change defaultFiles to []
+
+### Refactor
+
+* change defaultFiles to [] ([9c9e6fa](https://github.com/isdk/templify-lib.js/commit/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38))
+
 ## [0.3.6](https://github.com/isdk/templify-lib.js/compare/v0.3.5...v0.3.6) (2025-03-31)
 
 
