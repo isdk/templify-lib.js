@@ -10,7 +10,6 @@
 - [InputSchema](interfaces/InputSchema.md)
 - [ProcessSchemaOptions](interfaces/ProcessSchemaOptions.md)
 - [TemplateConfig](interfaces/TemplateConfig.md)
-- [TemplateParameterItem](interfaces/TemplateParameterItem.md)
 
 ## Type Aliases
 

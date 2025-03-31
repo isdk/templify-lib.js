@@ -22,7 +22,7 @@ all text-based files as defined in `DefaultAllTextFiles`.
 
 Either an array of file patterns or an object with `include` and `exclude` properties.
 
-`string`[] | `IncludeFiles`
+`IncludeFiles` | `string`[]
 
 ### defaultFiles?
 

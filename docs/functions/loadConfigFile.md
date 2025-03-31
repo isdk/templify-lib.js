@@ -8,7 +8,7 @@
 
 > **loadConfigFile**(`filename`, `options`?): `any`
 
-Defined in: [templify-lib/src/template-config.ts:29](https://github.com/isdk/templify-lib.js/blob/2074257ae84556236345f69e1a42173a287cae3a/src/template-config.ts#L29)
+Defined in: [templify-lib/src/template-config.ts:22](https://github.com/isdk/templify-lib.js/blob/2f28ed63fa1fab14ced4b1f55151d2b7839f83ed/src/template-config.ts#L22)
 
 ## Parameters
 

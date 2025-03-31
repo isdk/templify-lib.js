@@ -8,7 +8,7 @@
 
 > **applyTemplate**(`templateDir`, `options`): `Promise`\<`void`\>
 
-Defined in: [templify-lib/src/apply-template.ts:10](https://github.com/isdk/templify-lib.js/blob/2074257ae84556236345f69e1a42173a287cae3a/src/apply-template.ts#L10)
+Defined in: [templify-lib/src/apply-template.ts:10](https://github.com/isdk/templify-lib.js/blob/2f28ed63fa1fab14ced4b1f55151d2b7839f83ed/src/apply-template.ts#L10)
 
 ## Parameters
 

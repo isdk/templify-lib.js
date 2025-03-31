@@ -8,4 +8,4 @@
 
 > **InputEnumType** = (`string` \| `number` \| [`InputEnumOptionItem`](../interfaces/InputEnumOptionItem.md))[]
 
-Defined in: [templify-lib/src/reliverse-input.ts:47](https://github.com/isdk/templify-lib.js/blob/2074257ae84556236345f69e1a42173a287cae3a/src/reliverse-input.ts#L47)
+Defined in: [templify-lib/src/input-schema.ts:7](https://github.com/isdk/templify-lib.js/blob/2f28ed63fa1fab14ced4b1f55151d2b7839f83ed/src/input-schema.ts#L7)
