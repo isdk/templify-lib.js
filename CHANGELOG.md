@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.5](https://github.com/isdk/templify-lib.js/compare/v0.3.4...v0.3.5) (2025-03-31)
+
+
+### Refactor
+
+* make InputSchema clearer ([2f28ed6](https://github.com/isdk/templify-lib.js/commit/2f28ed63fa1fab14ced4b1f55151d2b7839f83ed))
+
 ## [0.3.4](https://github.com/isdk/templify-lib.js/compare/v0.3.3...v0.3.4) (2025-03-30)
 
 
