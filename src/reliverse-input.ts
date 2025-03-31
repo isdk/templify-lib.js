@@ -100,6 +100,7 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
 
 // walk through the schema and generate default data for non-interactive mode
 export function generateDefaultDataFromSchema(schema: InputSchema, result: any = {}) {
+  if (!schema.name) {schema.name = 'unknown'}
   switch (schema.type) {
     case 'string': {
       result[schema.name] = schema.default || '';
@@ -225,7 +226,7 @@ export async function handleStringPrompt(schema: InputSchema, options?: Partial<
 export async function handleNumberPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
   return await numberPrompt({
     ...options,
-    title: schema.title || schema.name,
+    title: schema.title || schema.name!,
     defaultValue: schema.default,
     validate: (value) => {
       const num = Number(value);
@@ -244,7 +245,7 @@ export async function handleNumberPrompt(schema: InputSchema, options?: Partial<
 export async function handleBooleanPrompt(schema: InputSchema, options?: Partial<ProcessSchemaOptions>) {
   return await confirmPrompt({
     ...options,
-    title: schema.title || schema.name,
+    title: schema.title || schema.name!,
     defaultValue: schema.default
   });
 }

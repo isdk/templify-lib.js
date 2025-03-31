@@ -7,7 +7,7 @@ export interface InputEnumOptionItem {
 export type InputEnumType = Array<string | number | InputEnumOptionItem>;
 
 export interface InputSchema {
-  name: string;
+  name?: string;
   type: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
   enum?: InputEnumType;
   minPick?: number;
@@ -16,7 +16,7 @@ export interface InputSchema {
   separator?: string;
   items?: InputSchema;
   properties?: Record<string, InputSchema>;
-  title: string;
+  title?: string;
   description?: string;
   default?: any;
 };

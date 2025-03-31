@@ -1,5 +1,5 @@
 export * from './input-schema'
 export * from './template-config'
-export * from './reliverse-input'
+export * from './get-input-data'
 export * from './apply-template'
 export * from './scan-template'
