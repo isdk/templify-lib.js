@@ -1,7 +1,7 @@
 {
   "name": "@isdk/templify-lib",
   "description": "The lib for templify",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "author": "Riceball LEE @snowyu",
   "bugs": "https://github.com/isdk/templify-lib.js/issues",
   "dependencies": {

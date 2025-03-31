@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.6](https://github.com/isdk/templify-lib.js/compare/v0.3.5...v0.3.6) (2025-03-31)
+
+
+### Bug Fixes
+
+* getInputDataBySchema for nonInteractive should merge options.data ([fbad85c](https://github.com/isdk/templify-lib.js/commit/fbad85c590da544d1cff51f6f632977eefe592bf))
+* should skip comment line ([0e78d9e](https://github.com/isdk/templify-lib.js/commit/0e78d9e4c262367b0cc002248fbea3df99f54204))
+
+
+### Refactor
+
+* follow the @isdk/util ([48c7d6c](https://github.com/isdk/templify-lib.js/commit/48c7d6c3a1d2ab646f694da5f676a5c4e5e551a8))
+* only export getInputDataBySchema ([757f435](https://github.com/isdk/templify-lib.js/commit/757f43558fbb958a9193ab49d9b5dbd824350d28))
+
 ## [0.3.5](https://github.com/isdk/templify-lib.js/compare/v0.3.4...v0.3.5) (2025-03-31)
 
 
