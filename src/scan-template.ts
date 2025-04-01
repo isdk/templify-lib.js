@@ -5,6 +5,7 @@ import { StringTemplate } from "@isdk/template-engines";
 
 import { DefaultAllTextFiles, DefaultTemplifyConfigFileName, TemplateConfig, loadConfigFile, normalizeIncludeFiles, saveConfigFile } from "./template-config.js";
 import { getIgnoreFiles } from "./get-ignore-files.js";
+import type { InputSchema } from "./input-type.js";
 
 /**
  * Scans the specified template directory to identify template files and extract variable information.
@@ -46,36 +47,35 @@ export async function scanTemplate(templateDir: string, options?: TemplateConfig
   const searchFiles: string[] = options?.files as any || DefaultAllTextFiles;
   const ignoreFiles: string[] = getIgnoreFiles(templateDir, options);
   searchFiles.push(...ignoreFiles.map(s => s[0] === '!' ? s.slice(1) : `!${s}`))
+  const templateFormat = tempifyConfig.templateFormat;
 
   let found = 0;
   await traverseFolder(templateDir, async (filePath, entry) => {
-    if (entry.isDirectory()) {
+    const isDir = entry.isDirectory();
+    if (isDir) {
       const stopped = glob(filePath, ignoreFiles, templateDir);
-      return stopped;
+      if (stopped) return stopped;
     }
-    if (glob(filePath, searchFiles, templateDir)) {
+
+    const variableNames = tryGetVariables(entry.name, templateFormat);
+    if (variableNames) {
+      const filename = path.relative(templateDir, filePath);
+      console.log(`scan found template variable on filename: ${filename}`);
+      applyVariables(variableNames, parameters);
+      if (!files.includes(filename)) {
+        files.push(filename);
+      }
+      found++;
+    }
+
+    if (!isDir && glob(filePath, searchFiles, templateDir)) {
       console.log(`scanning ${filePath}`)
       const content = await readFile(filePath, 'utf8');
-      if (StringTemplate.isTemplate({template: content, templateFormat: tempifyConfig.templateFormat})) {
+      const variableNames = tryGetVariables(content, templateFormat);
+      if (variableNames) {
         const filename = path.relative(templateDir, filePath);
         console.log(`  found template file: ${filename}`);
-        const template: any = new StringTemplate(content, {templateFormat: tempifyConfig.templateFormat});
-        if (template.getVariables) {
-          const variableNames: string[] = template.getVariables();
-          if (Array.isArray(variableNames)) {
-            variableNames.forEach((variableName) => {
-              if (parameters[variableName] == null) {
-                parameters[variableName] = {
-                  name: variableName,
-                  type: 'string',
-                  title: toCapitalCase(variableName),
-                  description: `Enter ${variableName} here`,
-                  default: ''
-                };
-              }
-            });
-          }
-        }
+        applyVariables(variableNames, parameters);
         if (!files.includes(filename)) {
           files.push(filename);
         }
@@ -95,4 +95,32 @@ export async function scanTemplate(templateDir: string, options?: TemplateConfig
   }
 
   return found
+}
+
+function tryGetVariables(content: string, templateFormat: string) {
+  let result: string[] | undefined;
+  if (StringTemplate.isTemplate({template: content, templateFormat})) {
+    const template: any = new StringTemplate(content, {templateFormat});
+    if (template.getVariables) {
+      const variableNames: string[] = template.getVariables();
+      if (Array.isArray(variableNames) && variableNames.length) {
+        result = variableNames;
+      }
+    }
+  }
+  return result;
+}
+
+function applyVariables(newVars: string[], resultParams: Record<string, InputSchema>) {
+  for (const variableName of newVars) {
+    if (resultParams[variableName] == null) {
+      resultParams[variableName] = {
+        name: variableName,
+        type: 'string',
+        title: toCapitalCase(variableName),
+        description: `Enter ${variableName} here`,
+        default: ''
+      };
+    }
+  }
 }

@@ -12,8 +12,8 @@ importers:
         specifier: ^0.6.1
         version: 0.6.2
       '@isdk/util':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.3.0
+        version: link:../util
       '@reliverse/prompts':
         specifier: ^1.6.0
         version: 1.6.0
@@ -434,16 +434,9 @@ packages:
     resolution: {integrity: sha512-HMshHUWuwlnflVqadIA8xe089bAx/YWFkuyjofER1tAUY2HMmKp2FNoX2/Q98crabY2P3yOJqvcEHjDic3Gl6g==}
     engines: {node: '>=20.11.1'}
 
-  '@isdk/glob@0.1.1':
-    resolution: {integrity: sha512-1zMgVGRLWzqsFqMRJ9dnCrlSD78L6YhiGSPRRUxys+t4yVM4V2C57Re1Vd8sBimTJ6bK9qWYXIAvsc/EH/ZjKw==}
-
   '@isdk/template-engines@0.6.2':
     resolution: {integrity: sha512-uMaKk6j0LX8U83Zh4BNCiCKxIkm5Tv1ZaoFEoc5VDxDwP4iTohd9oSbErhPqpACPtTkDLupAI54dfBjgXXWqYg==}
     engines: {node: '>=20.11.1'}
-
-  '@isdk/util@0.2.0':
-    resolution: {integrity: sha512-Q4qCjTZehgXAppVA4xmQF4sCEQKD7trLw/+cHzHE5f/eD/aSmAHGIPJxn0cwiIVCRmGMf6iTUKNs6DyKkBmLQQ==}
-    engines: {node: '>=18.0.0'}
 
   '@jest/expect-utils@29.7.0':
     resolution: {integrity: sha512-GlsNBWiFQFCVi9QVSx7f5AgMeLxe9YCCs5PuP2O2LdjDAA8Jh9eX7lA1Jq/xdXw3Wb3hyvlFNfZIfcRetSzYcA==}
@@ -1416,9 +1409,6 @@ packages:
   linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
 
-  load-config-file@2.0.0:
-    resolution: {integrity: sha512-+F7L7PHDhsqGXqr1s69/F54B3yU2UEU1AYLCEp7slVCeQnrJF0xgHbpP3AwY1xGrvoeKHZzNxtCk9n/vX8BZVQ==}
-
   load-tsconfig@0.2.5:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -1617,9 +1607,6 @@ packages:
     resolution: {integrity: sha512-Vj7sf++t5pBD637NSfkxpHSMfWaeig5+DKWLhcqIYx6mWQz5hdJTGDVMQiJcw1ZYkhs7AazKDGpRVji1LJCZUQ==}
     engines: {node: '>=18'}
 
-  path.js@2.0.1:
-    resolution: {integrity: sha512-vMXZqQ9i6dAS9sU9lYqxtsc9HCY3i+Ca523+DWEp0nIRNQvRzMpoyMSu9lejp0lv4DLF0jsVpRVljnQ1zaqmGA==}
-
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
 
@@ -1675,9 +1662,6 @@ packages:
   pretty-ms@9.2.0:
     resolution: {integrity: sha512-4yf0QO/sllf/1zbZWYnvWw3NxCQwLXKzIj0G849LSufP15BXKM0rbD2Z3wVnkMfjdn/CB0Dpp444gYAACdsplg==}
     engines: {node: '>=18'}
-
-  promise-sequence@2.0.0:
-    resolution: {integrity: sha512-jO4Okz+MNfzvNZlyjKfe8szFKR00UCioBdObbNw1EPRbBQCYkQDLQaOOBJ4WNQhp42Ua2rvSjwKA+99OOjTkfA==}
 
   punycode.js@2.3.1:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
@@ -2473,22 +2457,11 @@ snapshots:
     dependencies:
       abstract-error: 2.0.0
 
-  '@isdk/glob@0.1.1':
-    dependencies:
-      picomatch: 4.0.2
-
   '@isdk/template-engines@0.6.2':
     dependencies:
       '@isdk/common-error': 0.1.4
       custom-factory: 2.3.0
       util-ex: 2.2.1
-
-  '@isdk/util@0.2.0':
-    dependencies:
-      '@isdk/common-error': 0.1.4
-      '@isdk/glob': 0.1.1
-      load-config-file: 2.0.0
-      yaml: 2.7.1
 
   '@jest/expect-utils@29.7.0':
     dependencies:
@@ -3494,12 +3467,6 @@ snapshots:
     dependencies:
       uc.micro: 2.1.0
 
-  load-config-file@2.0.0:
-    dependencies:
-      path.js: 2.0.1
-      promise-sequence: 2.0.0
-      util-ex: 2.2.1
-
   load-tsconfig@0.2.5: {}
 
   locate-path@6.0.0:
@@ -3705,11 +3672,6 @@ snapshots:
 
   path-type@6.0.0: {}
 
-  path.js@2.0.1:
-    dependencies:
-      inherits-ex: 2.1.0
-      util-ex: 2.2.1
-
   pathe@2.0.3: {}
 
   pathval@2.0.0: {}
@@ -3747,8 +3709,6 @@ snapshots:
   pretty-ms@9.2.0:
     dependencies:
       parse-ms: 4.0.0
-
-  promise-sequence@2.0.0: {}
 
   punycode.js@2.3.1: {}
 
