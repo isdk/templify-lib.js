@@ -6,7 +6,7 @@
 
 # Interface: ProcessSchemaOptions
 
-Defined in: [src/reliverse-input.ts:42](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L42)
+Defined in: [templify-lib/src/reliverse-input.ts:42](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L42)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/reliverse-input.ts:42](https://github.com/isdk/templify-lib.js/
 
 > `optional` **data**: `any`
 
-Defined in: [src/reliverse-input.ts:50](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L50)
+Defined in: [templify-lib/src/reliverse-input.ts:50](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L50)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/reliverse-input.ts:50](https://github.com/isdk/templify-lib.js/
 
 > `optional` **dataPath**: `string`
 
-Defined in: [src/reliverse-input.ts:48](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L48)
+Defined in: [templify-lib/src/reliverse-input.ts:48](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L48)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/reliverse-input.ts:48](https://github.com/isdk/templify-lib.js/
 
 > `optional` **defaultDataFileName**: `string`
 
-Defined in: [src/reliverse-input.ts:49](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L49)
+Defined in: [templify-lib/src/reliverse-input.ts:49](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L49)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [src/reliverse-input.ts:49](https://github.com/isdk/templify-lib.js/
 
 > `optional` **description**: `string`
 
-Defined in: [src/reliverse-input.ts:45](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L45)
+Defined in: [templify-lib/src/reliverse-input.ts:45](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L45)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/reliverse-input.ts:45](https://github.com/isdk/templify-lib.js/
 
 > `optional` **displayInstructions**: `boolean`
 
-Defined in: [src/reliverse-input.ts:43](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L43)
+Defined in: [templify-lib/src/reliverse-input.ts:43](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L43)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [src/reliverse-input.ts:43](https://github.com/isdk/templify-lib.js/
 
 > `optional` **dryRun**: `boolean`
 
-Defined in: [src/reliverse-input.ts:51](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L51)
+Defined in: [templify-lib/src/reliverse-input.ts:51](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L51)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [src/reliverse-input.ts:51](https://github.com/isdk/templify-lib.js/
 
 > `optional` **nonInteractive**: `boolean`
 
-Defined in: [src/reliverse-input.ts:46](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L46)
+Defined in: [templify-lib/src/reliverse-input.ts:46](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L46)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [src/reliverse-input.ts:46](https://github.com/isdk/templify-lib.js/
 
 > `optional` **packageName**: `string`
 
-Defined in: [src/reliverse-input.ts:52](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L52)
+Defined in: [templify-lib/src/reliverse-input.ts:52](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L52)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [src/reliverse-input.ts:52](https://github.com/isdk/templify-lib.js/
 
 > `optional` **packageVersion**: `string`
 
-Defined in: [src/reliverse-input.ts:53](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L53)
+Defined in: [templify-lib/src/reliverse-input.ts:53](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L53)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: [src/reliverse-input.ts:53](https://github.com/isdk/templify-lib.js/
 
 > **rootDir**: `string`
 
-Defined in: [src/reliverse-input.ts:47](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L47)
+Defined in: [templify-lib/src/reliverse-input.ts:47](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L47)
 
 ***
 
@@ -94,4 +94,4 @@ Defined in: [src/reliverse-input.ts:47](https://github.com/isdk/templify-lib.js/
 
 > `optional` **title**: `string`
 
-Defined in: [src/reliverse-input.ts:44](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/reliverse-input.ts#L44)
+Defined in: [templify-lib/src/reliverse-input.ts:44](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/reliverse-input.ts#L44)

@@ -6,7 +6,7 @@
 
 # Interface: InputEnumOptionItem
 
-Defined in: [src/input-schema.ts:1](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/input-schema.ts#L1)
+Defined in: [templify-lib/src/input-schema.ts:1](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/input-schema.ts#L1)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/input-schema.ts:1](https://github.com/isdk/templify-lib.js/blob
 
 > `optional` **description**: `string`
 
-Defined in: [src/input-schema.ts:4](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/input-schema.ts#L4)
+Defined in: [templify-lib/src/input-schema.ts:4](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/input-schema.ts#L4)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/input-schema.ts:4](https://github.com/isdk/templify-lib.js/blob
 
 > `optional` **title**: `string`
 
-Defined in: [src/input-schema.ts:3](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/input-schema.ts#L3)
+Defined in: [templify-lib/src/input-schema.ts:3](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/input-schema.ts#L3)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [src/input-schema.ts:3](https://github.com/isdk/templify-lib.js/blob
 
 > **value**: `string` \| `number`
 
-Defined in: [src/input-schema.ts:2](https://github.com/isdk/templify-lib.js/blob/9c9e6fab88a3640338a82dfbafe2fc64c5e07a38/src/input-schema.ts#L2)
+Defined in: [templify-lib/src/input-schema.ts:2](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/input-schema.ts#L2)

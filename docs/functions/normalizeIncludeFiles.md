@@ -8,7 +8,7 @@
 
 > **normalizeIncludeFiles**(`files`?, `defaultFiles`?): `string`[]
 
-Defined in: node\_modules/.pnpm/@isdk+util@0.2.0/node\_modules/@isdk/util/dist/index.d.ts:151
+Defined in: util/dist/index.d.ts:151
 
 Normalizes a list of file patterns for glob matching.
 
@@ -26,7 +26,7 @@ Either an array of file patterns or an object with `include` and `exclude` prope
 
 ### defaultFiles?
 
-`string`[]
+`never`[]
 
 An optional array of default file patterns to use if no include patterns are specified.
                       Defaults to `DefaultAllTextFiles`.
