@@ -31,7 +31,11 @@ export function getIgnoreFiles(templateDir: string, options?: TemplateConfig) {
   const gitignoreFilepath = path.join(templateDir, '.gitignore');
   if (existsSync(gitignoreFilepath)) {
     const content = readFileSync(gitignoreFilepath, 'utf8');
-    const lines = content.split('\n').map(line => line.trim()).filter(line => line !== '' && !line.startsWith('#'));
+    const lines = content.split('\n').map(line => {
+      line = line.trim();
+      if (line[0] === '/') {line = line.slice(1)}
+      return line;
+    }).filter(line => line !== '' && !line.startsWith('#'));
     ignoreFiles.push(...lines);
   }
   ignoreFiles.push('.gitignore', '.git');
