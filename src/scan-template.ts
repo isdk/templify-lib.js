@@ -44,7 +44,17 @@ export async function scanTemplate(templateDir: string, options?: TemplateConfig
   const tempifyConfig: any = loadConfigFile(templifyConfigFilepath, {externalFile: 'README.md'}) || {};
   const files: string[] = normalizeIncludeFiles(tempifyConfig.files || []);
   const parameters = tempifyConfig.parameters || {};
-  const searchFiles: string[] = options?.files as any || DefaultAllTextFiles;
+  const defaultAllTextFiles: string[] = []
+  DefaultAllTextFiles.forEach(file => {
+    if (!defaultAllTextFiles.includes(file)) {
+      defaultAllTextFiles.push(file);
+    }
+    if (file.startsWith('**')) {
+      file = '.' + file
+      if (!defaultAllTextFiles.includes(file)) {defaultAllTextFiles.push(file)}
+    }
+  })
+  const searchFiles: string[] = options?.files as any || defaultAllTextFiles;
   const ignoreFiles: string[] = getIgnoreFiles(templateDir, options);
   searchFiles.push(...ignoreFiles.map(s => s[0] === '!' ? s.slice(1) : `!${s}`))
   const templateFormat = tempifyConfig.templateFormat;
