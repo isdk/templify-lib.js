@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.5.0](https://github.com/isdk/templify-lib.js/compare/v0.4.0...v0.5.0) (2025-04-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* add Directory names and file names to replace variable
+
+### Features
+
+* add Directory names and file names to replace variable ([1d686ff](https://github.com/isdk/templify-lib.js/commit/1d686ffde7ca8f5f9bea8f465f306a124b275165))
+
+
+### Bug Fixes
+
+* should remove first char "/" in gitignore ([0ec60ef](https://github.com/isdk/templify-lib.js/commit/0ec60efc3fb7af0318ceb185a5ccd665db71ea95))
+* should search .dir by default now ([a4bd00a](https://github.com/isdk/templify-lib.js/commit/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22))
+
 ## [0.4.0](https://github.com/isdk/templify-lib.js/compare/v0.3.6...v0.4.0) (2025-03-31)
 
 
