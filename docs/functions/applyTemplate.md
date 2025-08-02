@@ -8,7 +8,7 @@
 
 > **applyTemplate**(`templateDir`, `options`): `Promise`\<`undefined` \| `number`\>
 
-Defined in: [templify-lib/src/apply-template.ts:66](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/apply-template.ts#L66)
+Defined in: [src/apply-template.ts:66](https://github.com/isdk/templify-lib.js/blob/70f82ca837a8187ba06b8a8f3c7640f3017f6d6d/src/apply-template.ts#L66)
 
 Applies a template to files and directories within a specified directory based on the provided configuration.
 

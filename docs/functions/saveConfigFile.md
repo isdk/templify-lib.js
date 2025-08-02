@@ -8,7 +8,7 @@
 
 > **saveConfigFile**(`filename`, `config`, `options`?): `string`
 
-Defined in: [templify-lib/src/template-config.ts:18](https://github.com/isdk/templify-lib.js/blob/a4bd00ad1125d7bea4f09fdb1587c7d10c774e22/src/template-config.ts#L18)
+Defined in: [src/template-config.ts:18](https://github.com/isdk/templify-lib.js/blob/70f82ca837a8187ba06b8a8f3c7640f3017f6d6d/src/template-config.ts#L18)
 
 ## Parameters
 

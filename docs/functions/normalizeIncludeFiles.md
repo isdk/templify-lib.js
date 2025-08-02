@@ -8,7 +8,7 @@
 
 > **normalizeIncludeFiles**(`files`?, `defaultFiles`?): `string`[]
 
-Defined in: util/dist/index.d.ts:151
+Defined in: node\_modules/.pnpm/@isdk+util@0.3.2/node\_modules/@isdk/util/dist/index.d.ts:178
 
 Normalizes a list of file patterns for glob matching.
 
