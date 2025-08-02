@@ -20,3 +20,5 @@ export interface InputSchema {
   description?: string;
   default?: any;
 };
+
+export const IsDefaultTemplifyDataSymbol = Symbol("isDefaultData");

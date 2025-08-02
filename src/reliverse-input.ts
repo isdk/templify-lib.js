@@ -12,7 +12,7 @@ import {
 } from "@reliverse/rempts";
 import type { PromptOptions } from "@reliverse/rempts";
 
-import { InputSchema } from "./input-schema";
+import { InputSchema, IsDefaultTemplifyDataSymbol } from "./input-schema";
 import { loadConfigFile, saveConfigFile } from "./template-config";
 import pkg from "../package.json" with { type: "json" };
 
@@ -70,6 +70,7 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
   let data: any
   const nonInteractive = options.nonInteractive;
   let dataPath: string|undefined;
+  let isDefaultData: boolean|undefined;
   if (nonInteractive) {
     dataPath = options.dataPath;
     if (!dataPath) {
@@ -82,6 +83,7 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
       data = loadConfigFile(dataPath);
     } else {
       data = generateDefaultDataFromSchema(schema);
+      isDefaultData = true;
     }
 
   } else {
@@ -93,6 +95,9 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
   }
 
   if (dataPath && !options.dryRun) {saveConfigFile(dataPath, data);}
+  if (isDefaultData) {
+    Object.defineProperty(data, IsDefaultTemplifyDataSymbol, {value: true, enumerable: false})
+  }
 
   return data
 }
@@ -100,7 +105,7 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
 
 // walk through the schema and generate default data for non-interactive mode
 export function generateDefaultDataFromSchema(schema: InputSchema, result: any = {}) {
-  if (!schema.name) {schema.name = 'unknown'}
+  if (!schema.name) {schema.name = 'templify'}
   switch (schema.type) {
     case 'string': {
       result[schema.name] = schema.default || '';
