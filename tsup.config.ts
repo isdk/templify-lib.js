@@ -7,7 +7,7 @@ export default defineConfig({
   // splitting: true,
   // sourcemap: true,
   // clean: true,
-  minify: 'terser',
+  // minify: 'terser',
   terserOptions: {
     // compress: {
     //   drop_console: true,

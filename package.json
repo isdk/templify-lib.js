@@ -5,9 +5,9 @@
   "author": "Riceball LEE @snowyu",
   "bugs": "https://github.com/isdk/templify-lib.js/issues",
   "dependencies": {
-    "@isdk/template-engines": "^0.6.1",
-    "@isdk/util": "^0.3.0",
-    "@reliverse/prompts": "^1.6.0"
+    "@isdk/template-engines": "^0.6.5",
+    "@isdk/util": "^0.3.2",
+    "@reliverse/rempts": "^1.7.44"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

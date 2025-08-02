@@ -9,8 +9,8 @@ import {
   msg,
   startPrompt,
   endPrompt,
-} from "@reliverse/prompts";
-import type { PromptOptions } from "@reliverse/prompts";
+} from "@reliverse/rempts";
+import type { PromptOptions } from "@reliverse/rempts";
 
 import { InputSchema } from "./input-schema";
 import { loadConfigFile, saveConfigFile } from "./template-config";

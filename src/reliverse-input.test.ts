@@ -1,6 +1,6 @@
 import {existsSync} from 'fs'
 import { describe, it, expect, vi } from 'vitest';
-import { confirmPrompt, inputPrompt, multiselectPrompt, numberPrompt, selectPrompt } from '@reliverse/prompts';
+import { confirmPrompt, inputPrompt, multiselectPrompt, numberPrompt, selectPrompt } from '@reliverse/rempts';
 import {
   getInputDataBySchema,
   generateDefaultDataFromSchema,
@@ -19,7 +19,7 @@ import { loadConfigFile } from './template-config';
 vi.mock('fs', () => ({
   existsSync: vi.fn(),
 }));
-vi.mock('@reliverse/prompts', () => ({
+vi.mock('@reliverse/rempts', () => ({
   confirmPrompt: vi.fn(),
   inputPrompt: vi.fn(),
   multiselectPrompt: vi.fn(),
