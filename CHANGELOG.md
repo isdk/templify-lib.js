@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.6.0](https://github.com/isdk/templify-lib.js/compare/v0.5.0...v0.6.0) (2025-08-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* use the new @reliverse/rempts instead of @reliverse/prompts
+
+### Refactor
+
+* use the new @reliverse/rempts instead of @reliverse/prompts ([70f82ca](https://github.com/isdk/templify-lib.js/commit/70f82ca837a8187ba06b8a8f3c7640f3017f6d6d))
+
 ## [0.5.0](https://github.com/isdk/templify-lib.js/compare/v0.4.0...v0.5.0) (2025-04-01)
 
 
