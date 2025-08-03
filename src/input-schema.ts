@@ -22,3 +22,5 @@ export interface InputSchema {
 };
 
 export const IsDefaultTemplifyDataSymbol = Symbol("isDefaultData");
+
+export const DefaultTemplifySchemaName = "templify";
