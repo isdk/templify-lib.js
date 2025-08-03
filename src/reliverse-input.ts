@@ -1,5 +1,4 @@
 import path from "path";
-import { existsSync } from "fs";
 import {
   inputPrompt,
   selectPrompt,
@@ -12,8 +11,8 @@ import {
 } from "@reliverse/rempts";
 import type { PromptOptions } from "@reliverse/rempts";
 
-import { InputSchema, IsDefaultTemplifyDataSymbol } from "./input-schema";
-import { loadConfigFile, saveConfigFile } from "./template-config";
+import { DefaultTemplifySchemaName, InputSchema, IsDefaultTemplifyDataSymbol } from "./input-schema";
+import { existsConfigFile, loadConfigFile, saveConfigFile } from "./template-config";
 import pkg from "../package.json" with { type: "json" };
 
 type PreventWrongTerminalSizeOptions = {
@@ -51,6 +50,7 @@ export interface ProcessSchemaOptions {
   dryRun?: boolean;
   packageName?: string;
   packageVersion?: string;
+  schemaName?: string;
 }
 
 export const basicStartPromptConfig = {
@@ -79,8 +79,12 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
     const rootDir = options.rootDir;
     if (!path.isAbsolute(dataPath) && !dataPath.startsWith(rootDir)) {dataPath = path.join(rootDir, dataPath)}
 
-    if (existsSync(dataPath)) {
+    if (existsConfigFile(dataPath)) {
       data = loadConfigFile(dataPath);
+      const schemaName = options.schemaName ?? DefaultTemplifySchemaName;
+      if (data[schemaName]) {
+        data = data[schemaName];
+      }
     } else {
       data = generateDefaultDataFromSchema(schema);
       isDefaultData = true;
@@ -105,7 +109,7 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
 
 // walk through the schema and generate default data for non-interactive mode
 export function generateDefaultDataFromSchema(schema: InputSchema, result: any = {}) {
-  if (!schema.name) {schema.name = 'templify'}
+  if (!schema.name) {schema.name = DefaultTemplifySchemaName}
   switch (schema.type) {
     case 'string': {
       result[schema.name] = schema.default || '';
