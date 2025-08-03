@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.6.1](https://github.com/isdk/templify-lib.js/compare/v0.6.0...v0.6.1) (2025-08-03)
+
+
+### Features
+
+* add const DefaultTemplifySchemaName ([ac88ee3](https://github.com/isdk/templify-lib.js/commit/ac88ee319fcbe0d0586d3a29e2502abf3bd79527))
+* add existsConfigFile func ([4b962f8](https://github.com/isdk/templify-lib.js/commit/4b962f8f782c205f902516c2f0e2d187456065b6))
+
+
+### Bug Fixes
+
+* dataPath should check whether in rootDir ([407aeaf](https://github.com/isdk/templify-lib.js/commit/407aeaf33e42287ad80d4753de3f322fbf885f95))
+* should load data from schema name ([2021de0](https://github.com/isdk/templify-lib.js/commit/2021de0477eb7d351d355caed33ee96d779c1169))
+
+
+### Refactor
+
+* add IsDefaultTemplifyDataSymbol and the default schema name templify ([9e12b08](https://github.com/isdk/templify-lib.js/commit/9e12b089ed023480101850db992cb5e56f9fc59a))
+
 ## [0.6.0](https://github.com/isdk/templify-lib.js/compare/v0.5.0...v0.6.0) (2025-08-02)
 
 
