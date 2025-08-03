@@ -1,4 +1,3 @@
-import {existsSync} from 'fs'
 import { describe, it, expect, vi } from 'vitest';
 import { confirmPrompt, inputPrompt, multiselectPrompt, numberPrompt, selectPrompt } from '@reliverse/rempts';
 import {
@@ -13,7 +12,7 @@ import {
   handleEnumPrompt,
 } from './reliverse-input';
 import type { InputSchema } from './input-schema';
-import { loadConfigFile } from './template-config';
+import { existsConfigFile, loadConfigFile } from './template-config';
 
 // Mock dependencies
 vi.mock('fs', () => ({
@@ -31,6 +30,7 @@ vi.mock('@reliverse/rempts', () => ({
 vi.mock('./template-config', () => ({
   loadConfigFile: vi.fn(),
   saveConfigFile: vi.fn(),
+  existsConfigFile: vi.fn(),
 }));
 
 describe('reliverse-input', () => {
@@ -41,7 +41,7 @@ describe('reliverse-input', () => {
       const mockData = { test: 'loaded-data' };
 
       // Mock file existence and content
-      vi.mocked(existsSync).mockReturnValue(true);
+      vi.mocked(existsConfigFile).mockReturnValue(true);
       vi.mocked(loadConfigFile).mockReturnValue(mockData);
 
       const result = await getInputDataBySchema(mockSchema, options);
@@ -54,7 +54,7 @@ describe('reliverse-input', () => {
       const options = { nonInteractive: true, rootDir: '/mock/path', dataPath: '/mock/path/data.json', data: {other: 'data'}};
 
       // Mock file does not exist
-      vi.mocked(existsSync).mockReturnValue(false);
+      vi.mocked(existsConfigFile).mockReturnValue(false);
 
       const result = await getInputDataBySchema(mockSchema, options);
       expect(result).toEqual({ test: 'default-value', other: 'data' });
