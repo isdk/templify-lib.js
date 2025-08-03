@@ -21,11 +21,14 @@
 - [DefaultAllTextFiles](variables/DefaultAllTextFiles.md)
 - [DefaultDataFileName](variables/DefaultDataFileName.md)
 - [DefaultTemplifyConfigFileName](variables/DefaultTemplifyConfigFileName.md)
+- [DefaultTemplifySchemaName](variables/DefaultTemplifySchemaName.md)
 - [extendedStartPromptConfig](variables/extendedStartPromptConfig.md)
+- [IsDefaultTemplifyDataSymbol](variables/IsDefaultTemplifyDataSymbol.md)
 
 ## Functions
 
 - [applyTemplate](functions/applyTemplate.md)
+- [existsConfigFile](functions/existsConfigFile.md)
 - [getInputDataBySchema](functions/getInputDataBySchema.md)
 - [loadConfigFile](functions/loadConfigFile.md)
 - [normalizeIncludeFiles](functions/normalizeIncludeFiles.md)
