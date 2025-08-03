@@ -77,7 +77,7 @@ export async function getInputDataBySchema(schema: InputSchema, options: Process
       dataPath = options.defaultDataFileName ?? 'templify-data';
     }
     const rootDir = options.rootDir;
-    if (!path.isAbsolute(dataPath)) {dataPath = path.join(rootDir, dataPath)}
+    if (!path.isAbsolute(dataPath) && !dataPath.startsWith(rootDir)) {dataPath = path.join(rootDir, dataPath)}
 
     if (existsSync(dataPath)) {
       data = loadConfigFile(dataPath);
