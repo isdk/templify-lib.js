@@ -22,3 +22,7 @@ export function saveConfigFile(filename: string, config: any, options?: LoadConf
 export function loadConfigFile(filename: string, options?: LoadConfigFileOptions) {
   return ConfigFile.loadSync(filename, options)
 }
+
+export function existsConfigFile(filename: string) {
+  return ConfigFile.existsSync(filename)
+}
